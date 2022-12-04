@@ -11,4 +11,29 @@ public class SmartphoneTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
+ @Test
+    public void matchesTestIfInName(){
+        Smartphone product = new Smartphone(23,"Readme 4x", 10000, "Xiaomi");
+
+        boolean expected = true;
+        boolean actual = product.matches("Readme");
+    }
+
+    @Test
+    public void matchesTestIfInProducer(){
+        Smartphone product = new Smartphone(23,"Readme 4x", 10000, "Xiaomi");
+
+        boolean expected = true;
+        boolean actual = product.matches("Xiaomi");
+    }
+
+    @Test
+    public void matchesTestIfNoNameNoProducer(){
+        Smartphone product = new Smartphone(23,"Readme 4x", 10000, "Xiaomi");
+
+        boolean expected = false;
+        boolean actual = product.matches("Peach");
+    }
+
 }

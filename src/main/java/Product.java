@@ -21,4 +21,11 @@ public class Product {
         return cost;
     }
 
+    public boolean matches(String search) {
+        if (getName().contains(search)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
