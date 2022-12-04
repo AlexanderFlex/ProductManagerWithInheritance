@@ -12,4 +12,29 @@ public class BookTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
+    @Test
+    public void matchesTestIfInName(){
+        Book product = new Book(1, "Neznayka in Solar Sity", 200, "Носов");
+
+        boolean expected = true;
+        boolean actual = product.matches("Neznayka");
+    }
+
+    @Test
+    public void matchesTestIfInAuthor(){
+        Book product = new Book(1, "Neznayka in Solar Sity", 200, "Носов");
+
+        boolean expected = true;
+        boolean actual = product.matches("Носов");
+    }
+
+    @Test
+    public void matchesTestIfNoNameNoAuthor(){
+        Book product = new Book(1, "Neznayka in Solar Sity", 200, "Носов");
+
+        boolean expected = false;
+        boolean actual = product.matches("Bublik");
+    }
+
 }

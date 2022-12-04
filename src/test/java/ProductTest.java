@@ -22,4 +22,24 @@ public class ProductTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
+    @Test
+    public void matchesTestIfСontains(){
+        Product product = new Product(1, "Neznayka in Solar Sity", 200);
+
+        boolean expected = true;
+        boolean actual = product.matches("Solar");
+
+        Assertions.assertEquals(expected,actual);
+    }
+
+    @Test
+    public void matchesTestIfNotСontains(){
+        Product product = new Product(12,"Neznayka on the Moon", 200);
+
+        boolean expected = false;
+        boolean actual = product.matches("Solar");
+
+        Assertions.assertEquals(expected,actual);
+    }
 }
