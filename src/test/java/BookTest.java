@@ -31,10 +31,10 @@ public class BookTest {
 
     @Test
     public void matchesTestIfNoNameNoAuthor(){
-        Book product = new Book(1, "Neznayka in Solar Sity", 200, "Носов");
+        Book product1 = new Book(1, "Neznayka in Solar Sity", 200, "Носов");
 
         boolean expected = false;
-        boolean actual = product.matches("Bublik");
+        boolean actual = product1.matches("Bublik");
     }
 
 }
